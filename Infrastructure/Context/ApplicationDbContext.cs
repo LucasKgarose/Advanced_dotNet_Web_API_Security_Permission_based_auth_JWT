@@ -22,4 +22,14 @@ public class ApplicationDbContext
     public DbSet<Employee> Employees { get; set; }
     // Second Option
     //public DbSet<Employee> Employees = new DbSet<Employee>();
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+
+        modelBuilder.Entity<Employee>(entity =>
+        {
+            entity.Property(e => e.Salary).HasPrecision(18, 2);
+        });
+    }
 }
