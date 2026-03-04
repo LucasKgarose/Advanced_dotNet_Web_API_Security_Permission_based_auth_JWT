@@ -26,6 +26,7 @@ public class ApplicationDbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+        modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);
 
         modelBuilder.Entity<Employee>(entity =>
         {
