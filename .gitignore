@@ -27,19 +27,24 @@ bld/
 project.lock.json
 project.fragment.lock.json
 artifacts/
+.dotnet/
 
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
 
 # NuGet Packages
 *.nupkg
-# NuGet Symbol Packages
 *.snupkg
+packages/
 
 # Others
 ~$*
 *~
 CodeCoverage/
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
 
 # MSBuild Binary and Structured Log
 *.binlog
@@ -53,6 +58,21 @@ CodeCoverage/
 TestResult.xml
 nunit-*.xml
 
-# Vscode
-.vs
-.vscode
+# Visual Studio
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.svclog
+*.pdb
+*.cache
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# OS generated
+.DS_Store
+Thumbs.db
