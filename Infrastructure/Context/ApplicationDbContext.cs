@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Domain;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,4 +18,8 @@ public class ApplicationDbContext
         : base(options)
     {
     }
+
+    public DbSet<Employee> Employees { get; set; }
+    // Second Option
+    //public DbSet<Employee> Employees = new DbSet<Employee>();
 }
